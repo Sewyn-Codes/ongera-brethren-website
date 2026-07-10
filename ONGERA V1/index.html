@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =========================================================
+       SEO & META – Ong'era Brethren International Foundation
+  ========================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Ong'era Brethren International Foundation | NGO Kenya – Sponsor a Child</title>
+
+  <meta name="description"
+    content="Ong'era Brethren International Foundation is a registered NGO in Migori County, Kenya, providing a safe home, quality education, and meals to 60+ orphans. Sponsor a child, donate, or fund a project today." />
+  <meta name="keywords"
+    content="NGO Kenya, orphanage Kenya, sponsor a child Kenya, Ong'era Brethren, donate to Kenya, Migori County NGO, children charity Kenya, orphanage Migori, Kenya non-profit, child sponsorship Africa" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Ong'era Brethren International Foundation" />
+
+  <!-- Open Graph (Facebook / WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ongerabrethren.org/" />
+  <meta property="og:title" content="Ong'era Brethren International Foundation – Empowering Children in Kenya" />
+  <meta property="og:description"
+    content="60+ resident orphans, 240+ day scholars, and over 1,000 meals served monthly. Join us in building brighter futures in Migori County, Kenya." />
+  <meta property="og:image" content="https://www.ongerabrethren.org/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ong'era Brethren International Foundation" />
+  <meta property="og:locale" content="en_KE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@OngeraBrethren" />
+  <meta name="twitter:title" content="Ong'era Brethren International Foundation – Sponsor a Child in Kenya" />
+  <meta name="twitter:description"
+    content="Empowering orphans and day scholars in Migori County, Kenya with education, shelter, and community. Donate or sponsor a child today." />
+  <meta name="twitter:image" content="https://www.ongerabrethren.org/images/og-cover.jpg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.ongerabrethren.org/" />
+
+  <!-- Structured Data – Non-Profit Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Ong'era Brethren International Foundation",
+    "alternateName": "OBIF",
+    "url": "https://www.ongerabrethren.org/",
+    "logo": "https://www.ongerabrethren.org/images/logo.png",
+    "foundingDate": "2023",
+    "description": "A registered non-profit providing shelter, education, and care to orphaned children in Migori County, Kenya.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Migori",
+      "addressRegion": "Migori County",
+      "addressCountry": "KE"
+    },
+    "email": "info@ongerabrethren.org",
+    "sameAs": ["https://www.facebook.com/ongerabrethren"]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              900: '#0a1628',
+              800: '#0f2044',
+              700: '#152b5e',
+              600: '#1e3a6e',
+              500: '#2a4d8e',
+            },
+            orange: {
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea6c10',
+              700: '#c2540a',
+            },
+            earth: {
+              400: '#86a667',
+              500: '#6b8f47',
+              600: '#527a32',
+              700: '#3f6120',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* ── Global ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #f8f9fb; color: #1a1a2e; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', Georgia, serif; }
+    p { line-height: 1.75; }
+
+    /* ── Sticky Header ───────────────────────────────── */
+    #site-header {
+      position: sticky; top: 0; z-index: 999;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    #site-header.scrolled {
+      background: rgba(10,22,40,0.97) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    }
+
+    /* ── Hero ────────────────────────────────────────── */
+    #hero {
+      background-image:
+        linear-gradient(to bottom,rgba(10,22,40,0.72) 0%,rgba(10,22,40,0.55) 60%,rgba(10,22,40,0.82) 100%),
+        url('images/children-with-visitor.jpg');
+      background-size: cover;
+      background-position: center 30%;
+    }
+
+    /* ── Stat Cards ──────────────────────────────────── */
+    .stat-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .stat-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.14); }
+
+    /* ── Progress Bar ────────────────────────────────── */
+    .progress-track { background: #e2e8f0; border-radius: 9999px; overflow: hidden; }
+    .progress-fill {
+      height: 10px; border-radius: 9999px;
+      background: linear-gradient(90deg,#f97316,#fb923c);
+      transition: width 1.4s cubic-bezier(0.22,1,0.36,1);
+      width: 0;
+    }
+
+    /* ── Project Cards ───────────────────────────────── */
+    .project-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .project-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(0,0,0,0.13); }
+    .project-img { height: 210px; object-fit: cover; width: 100%; display: block; }
+
+    /* ── Form Input ──────────────────────────────────── */
+    .form-input {
+      width: 100%; border: 1.5px solid #cbd5e1; border-radius: 0.5rem;
+      padding: 0.65rem 1rem; font-size: 0.95rem; outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      background: #fff; font-family: inherit;
+    }
+    .form-input:focus { border-color: #2a4d8e; box-shadow: 0 0 0 3px rgba(42,77,142,0.15); }
+
+    /* ── Wire Field ──────────────────────────────────── */
+    .wire-field {
+      display: flex; align-items: center; justify-content: space-between;
+      background: #f1f5fb; border: 1px solid #dce4f0; border-radius: 0.5rem;
+      padding: 0.75rem 1rem; gap: 0.75rem;
+    }
+    .wire-field span {
+      font-family: 'Inter', monospace; font-weight: 600; color: #0f2044;
+      font-size: 0.9rem; word-break: break-all;
+    }
+    .copy-btn {
+      flex-shrink: 0; background: #2a4d8e; color: #fff;
+      border: none; border-radius: 0.4rem; padding: 0.35rem 0.75rem;
+      font-size: 0.78rem; cursor: pointer; transition: background 0.2s;
+      white-space: nowrap; font-family: inherit;
+    }
+    .copy-btn:hover { background: #1e3a6e; }
+    .copy-btn.copied { background: #527a32; }
+
+    /* ── Gallery ─────────────────────────────────────── */
+    .masonry-grid { columns: 2; column-gap: 0.75rem; }
+    @media (min-width: 640px) { .masonry-grid { columns: 3; } }
+    @media (min-width: 1024px) { .masonry-grid { columns: 4; } }
+    .masonry-item {
+      break-inside: avoid; margin-bottom: 0.75rem;
+      overflow: hidden; border-radius: 0.75rem;
+      cursor: zoom-in; position: relative;
+    }
+    .masonry-item img { width: 100%; display: block; transition: transform 0.4s ease, filter 0.3s ease; }
+    .masonry-item:hover img { transform: scale(1.04); filter: brightness(0.88); }
+    .masonry-overlay {
+      position: absolute; inset: 0; background: rgba(10,22,40,0);
+      border-radius: 0.75rem; transition: background 0.3s ease;
+      display: flex; align-items: center; justify-content: center; opacity: 0;
+    }
+    .masonry-item:hover .masonry-overlay { background: rgba(10,22,40,0.3); opacity: 1; }
+
+    /* ── Lightbox ────────────────────────────────────── */
+    #lightbox {
+      position: fixed; inset: 0; background: rgba(5,12,24,0.97);
+      z-index: 9999; display: none; flex-direction: column;
+      align-items: center; justify-content: center; padding: 1rem;
+    }
+    #lightbox.active { display: flex; animation: fadeIn 0.25s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    #lightbox-img { max-width: 92vw; max-height: 74vh; object-fit: contain; border-radius: 0.5rem; }
+    #lightbox-caption { color: #94a3b8; font-size: 0.85rem; margin-top: 0.75rem; text-align: center; max-width: 600px; }
+
+    /* ── WhatsApp FAB ────────────────────────────────── */
+    #whatsapp-fab {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 998;
+      width: 3.5rem; height: 3.5rem; border-radius: 50%;
+      background: #25d366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+      animation: waPulse 2s ease-in-out infinite;
+      text-decoration: none; transition: transform 0.2s ease;
+    }
+    @keyframes waPulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      50% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+    }
+    #whatsapp-fab:hover { transform: scale(1.12); }
+
+    /* ── Mobile Nav ──────────────────────────────────── */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+
+    /* ── Scroll Reveal ───────────────────────────────── */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Section Eyebrow ─────────────────────────────── */
+    .section-eyebrow {
+      display: inline-block; letter-spacing: 0.12em; font-size: 0.72rem;
+      font-weight: 700; text-transform: uppercase; color: #f97316;
+      border-bottom: 2px solid #f97316; padding-bottom: 2px; margin-bottom: 0.75rem;
+    }
+
+    /* ── Toast ───────────────────────────────────────── */
+    #toast {
+      position: fixed; bottom: 5.5rem; right: 1.5rem; z-index: 9998;
+      background: #0f2044; color: #fff; border-left: 4px solid #f97316;
+      padding: 0.65rem 1.1rem; border-radius: 0.45rem; font-size: 0.85rem; font-weight: 500;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(8px);
+    }
+    #toast.show { opacity: 1; transform: translateY(0); }
+
+    /* ── Custom checkbox ─────────────────────────────── */
+    .custom-check { accent-color: #f97316; width: 1.1rem; height: 1.1rem; cursor: pointer; }
+
+    /* ── Amount btn active ───────────────────────────── */
+    .amount-btn { border: 2px solid #cbd5e1; color: #475569; font-weight: 700;
+                  padding: 0.625rem 0; border-radius: 0.75rem; font-size: 0.875rem; transition: all 0.15s; cursor: pointer; background: #fff; }
+    .amount-btn:hover, .amount-btn.active { border-color: #f97316; color: #ea6c10; background: #fff7ed; }
+
+    /* ── Founder Section ─────────────────────────────── */
+    #founder {
+      background: linear-gradient(135deg, #0a1628 0%, #152b5e 50%, #0a1628 100%);
+      position: relative; overflow: hidden;
+    }
+    /* Founder portrait – portrait photo, crop to show face at top */
+    .founder-portrait { object-position: top center !important; }
+    #founder::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .founder-quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic; font-size: 1.1rem; line-height: 1.85;
+      color: #cbd5e1; border-left: 3px solid #f97316; padding-left: 1.25rem;
+    }
+    @media (min-width: 768px) { .founder-quote { font-size: 1.2rem; } }
+    .founder-timeline-dot {
+      width: 2.5rem; height: 2.5rem; border-radius: 50%;
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; box-shadow: 0 0 0 4px rgba(249,115,22,0.2);
+    }
+    .founder-portrait {
+      width: 140px; height: 140px; border-radius: 50%;
+      border: 4px solid #f97316; object-fit: cover;
+      box-shadow: 0 0 0 8px rgba(249,115,22,0.15), 0 20px 60px rgba(0,0,0,0.4);
+    }
+    @media (min-width: 640px) { .founder-portrait { width: 180px; height: 180px; } }
+
+    /* ── Mobile responsiveness extras ───────────────── */
+    @media (max-width: 639px) {
+      .project-img { height: 180px; }
+      #hero { min-height: 100svh; }
+      .wire-field { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .wire-field span { font-size: 0.82rem; }
+      .copy-btn { width: 100%; text-align: center; padding: 0.5rem; }
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- =====================================================
+       STICKY HEADER
+  ====================================================== -->
+  <header id="site-header" class="bg-navy-900 bg-opacity-95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2 flex-shrink-0"
+          aria-label="Ong'era Brethren International Foundation – Home">
+          <img src="images/logo.png"
+            alt="Ong'era Brethren International Foundation official circular logo showing two children under a house with a globe, established 2023"
+            class="w-12 h-12 object-contain rounded-full bg-white p-0.5 flex-shrink-0"
+            width="48" height="48" loading="eager" />
+          <div class="hidden sm:block">
+            <p class="text-white font-display text-sm font-bold leading-tight">Ong'era Brethren</p>
+            <p class="text-orange-400 text-xs font-medium leading-tight">International Foundation</p>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-6" aria-label="Primary navigation">
+          <a href="#about" class="text-slate-300 hover:text-orange-400 text-sm font-medium transition-colors">About</a>
+          <a href="#founder" class="text-slate-300 hover:text-orange-400 text-sm font-medium transition-colors">Founder</a>
+          <a href="#impact" class="text-slate-300 hover:text-orange-400 text-sm font-medium transition-colors">Impact</a>
+          <a href="#projects" class="text-slate-300 hover:text-orange-400 text-sm font-medium transition-colors">Projects</a>
+          <a href="#gallery" class="text-slate-300 hover:text-orange-400 text-sm font-medium transition-colors">Gallery</a>
+          <a href="#donate" class="text-slate-300 hover:text-orange-400 text-sm font-medium transition-colors">Donate</a>
+                    <a href="#contact" class="text-slate-300 hover:text-orange-400 text-sm font-medium transition-colors">Contact</a>
+        </nav>
+
+        <!-- CTA + Hamburger -->
+        <div class="flex items-center gap-3">
+          <a href="#donate"
+            class="hidden sm:inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-200 shadow-lg hover:shadow-orange-500/40 hover:scale-105">
+            <i class="fa-solid fa-heart text-xs" aria-hidden="true"></i> DONATE NOW
+          </a>
+          <button id="hamburger" class="lg:hidden text-white p-2 rounded-md"
+            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav id="mobile-menu" class="lg:hidden pb-4" aria-label="Mobile navigation">
+        <div class="flex flex-col gap-1 border-t border-white/10 pt-3">
+          <a href="#about" class="mobile-nav-link text-slate-200 hover:text-orange-400 py-2 px-2 text-sm font-medium transition-colors">About</a>
+          <a href="#founder" class="mobile-nav-link text-slate-200 hover:text-orange-400 py-2 px-2 text-sm font-medium transition-colors">Founder</a>
+          <a href="#impact" class="mobile-nav-link text-slate-200 hover:text-orange-400 py-2 px-2 text-sm font-medium transition-colors">Impact</a>
+          <a href="#projects" class="mobile-nav-link text-slate-200 hover:text-orange-400 py-2 px-2 text-sm font-medium transition-colors">Projects</a>
+          <a href="#gallery" class="mobile-nav-link text-slate-200 hover:text-orange-400 py-2 px-2 text-sm font-medium transition-colors">Gallery</a>
+          <a href="#donate" class="mobile-nav-link text-slate-200 hover:text-orange-400 py-2 px-2 text-sm font-medium transition-colors">Donate</a>
+                    <a href="#contact" class="mobile-nav-link text-slate-200 hover:text-orange-400 py-2 px-2 text-sm font-medium transition-colors">Contact</a>
+          <a href="#donate"
+            class="mobile-nav-link mt-2 inline-flex justify-center items-center gap-2 bg-orange-500 text-white text-sm font-bold px-5 py-2.5 rounded-full">
+            <i class="fa-solid fa-heart text-xs" aria-hidden="true"></i> DONATE NOW
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center text-center px-4 py-24">
+      <!-- Bottom wave -->
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          class="w-full h-16" fill="#f8f9fb">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" />
+        </svg>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto">
+        <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest mb-7">
+          <span class="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse" aria-hidden="true"></span>
+          Est. 2023 &middot; Migori County, Kenya
+        </span>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-tight mb-6 drop-shadow-lg">
+          Building Brighter<br class="hidden sm:block" />
+          <span class="text-orange-400">Futures,</span> Together.
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Empowering children in Kenya with love, education, care, and a safe home.
+          <strong class="text-white">Est. 2023.</strong>
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#donate" id="hero-cta"
+            class="group inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold text-[0.85rem] uppercase tracking-widest px-8 py-4 rounded-full shadow-xl transition-all duration-200 hover:scale-105 w-full sm:w-auto justify-center"
+            aria-label="Support Our Mission – scroll to donation section">
+            <i class="fa-solid fa-hand-holding-heart text-lg group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+            Support Our Mission
+          </a>
+          <a href="#about"
+            class="inline-flex items-center gap-2 border border-white/40 text-white hover:bg-white/10 font-semibold text-[0.85rem] uppercase tracking-widest px-8 py-4 rounded-full transition-all duration-200 w-full sm:w-auto justify-center">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i> Learn More
+          </a>
+        </div>
+
+        <!-- Hero trust strip -->
+        <div class="mt-14 grid grid-cols-3 gap-4 max-w-sm mx-auto">
+          <div class="text-center">
+            <p class="text-2xl font-bold text-orange-400">60+</p>
+            <p class="text-xs text-slate-300 mt-0.5">Orphans Housed</p>
+          </div>
+          <div class="text-center border-x border-white/20">
+            <p class="text-2xl font-bold text-orange-400">240+</p>
+            <p class="text-xs text-slate-300 mt-0.5">Day Scholars</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold text-orange-400">1K+</p>
+            <p class="text-xs text-slate-300 mt-0.5">Meals / Month</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         QUICK FACTS & PHILOSOPHY
+    ====================================================== -->
+    <section id="about" class="bg-slate-50 py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <span class="section-eyebrow">Who We Are</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-900 mt-1">Our Foundation at a Glance</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+          <!-- Quick Facts -->
+          <div class="reveal bg-white rounded-2xl shadow-sm border border-slate-100 p-8 lg:p-10">
+            <div class="flex items-center gap-3 mb-7">
+              <div class="w-10 h-10 rounded-xl bg-navy-900 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-list-check text-orange-400 text-base" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-xl font-bold text-navy-900">Quick Facts</h3>
+            </div>
+            <ul class="space-y-5">
+              <li class="flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-orange-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fa-solid fa-star text-orange-500 text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Motto</p>
+                  <p class="font-bold text-navy-900 text-lg mt-0.5">"Excel Beyond the Sky"</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fa-solid fa-eye text-navy-600 text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Vision</p>
+                  <p class="font-bold text-navy-900 text-lg mt-0.5">"Bring change to all mankind"</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-green-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fa-solid fa-location-dot text-earth-600 text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Location</p>
+                  <p class="font-bold text-navy-900 text-lg mt-0.5">Migori County, Kenya</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fa-solid fa-calendar text-slate-500 text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Established</p>
+                  <p class="font-bold text-navy-900 text-lg mt-0.5">2023</p>
+                </div>
+              </li>
+            </ul>
+            <!-- Map -->
+            <div class="mt-8 rounded-xl overflow-hidden border border-slate-200">
+              <iframe
+                title="Map showing Migori County, Kenya – location of Ong'era Brethren International Foundation"
+                src="https://maps.google.com/maps?q=Migori+County+Kenya&t=&z=9&ie=UTF8&iwloc=&output=embed"
+                width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Philosophy -->
+          <div class="reveal" style="transition-delay:0.15s">
+            <div class="bg-navy-900 rounded-2xl p-8 lg:p-10 text-white h-full flex flex-col justify-between">
+              <div>
+                <span class="section-eyebrow" style="color:#f97316;border-color:#f97316;">Our Philosophy</span>
+                <h3 class="text-2xl sm:text-3xl font-display font-bold text-white mt-2 mb-6 leading-tight">
+                  Compassionate molding — our philosophy.
+                </h3>
+                <p class="text-slate-300 leading-relaxed text-base mb-6">
+                  We believe excellence is forged in character, shaped by community, and sustained by spiritual depth.
+                  Every aspect of our campus is designed to gently mold young people into confident, kind, and capable citizens.
+                </p>
+                <p class="text-slate-300 leading-relaxed text-base">
+                  Through education, mentorship, nutrition, and a loving environment, we walk alongside each child on
+                  their unique journey—ensuring no child is left behind, and every dream is given a fighting chance.
+                </p>
+              </div>
+              <div class="mt-8 flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-full">❤️ Love</span>
+                <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-full">📚 Education</span>
+                <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-full">🏠 Safe Home</span>
+                <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-full">🌱 Growth</span>
+                <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-full">🙏 Spirituality</span>
+                <span class="px-3 py-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold rounded-full">🤝 Community</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FOUNDER – ONG'ERA DANIEL
+    ====================================================== -->
+    <section id="founder" class="py-20 px-4" style="background:linear-gradient(135deg,#0a1628 0%,#152b5e 50%,#0a1628 100%);position:relative;overflow:hidden;">
+      <div class="max-w-6xl mx-auto">
+
+        <!-- Section heading -->
+        <div class="text-center mb-16 reveal">
+          <span class="section-eyebrow" style="color:#fb923c;border-color:#fb923c;">The Man Behind the Mission</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mt-1">Ong'era Daniel</h2>
+          <p class="text-slate-400 mt-3 max-w-xl mx-auto text-sm">Founder &amp; Executive Director &mdash; Ong'era Brethren International Foundation</p>
+        </div>
+
+        <!-- Portrait + Quote block -->
+        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12 mb-16">
+
+          <!-- Portrait side -->
+          <div class="flex flex-col items-center gap-5 flex-shrink-0 reveal">
+            <div class="relative">
+              <img
+                class="founder-portrait"
+                src="images/founder-daniel.jpg"
+                alt="Ong'era Daniel, founder and Executive Director of Ong'era Brethren International Foundation, in a white shirt and tie, standing outside the foundation campus in Migori County, Kenya. TikTok: @ongeracharitycentre"
+                loading="eager" width="180" height="270"
+                style="object-fit:cover;object-position:top center;width:180px;height:180px;border-radius:50%;"
+              />
+              <!-- Glow ring -->
+              <div class="absolute -inset-2 rounded-full border border-orange-500/30 pointer-events-none" aria-hidden="true"></div>
+            </div>
+            <div class="text-center">
+              <p class="text-white font-display font-bold text-xl">Ong'era Daniel</p>
+              <p class="text-orange-400 text-sm font-medium mt-0.5">Founder &amp; Executive Director</p>
+              <p class="text-slate-400 text-xs mt-1">Est. 2023 · Migori County, Kenya</p>
+            </div>
+            <!-- Signature line -->
+            <div class="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-5 py-3">
+              <i class="fa-solid fa-fire text-orange-400" aria-hidden="true"></i>
+              <span class="text-white text-sm font-semibold">Started with zero funds.<br /><span class="text-orange-400">Only a burning heart.</span></span>
+            </div>
+          </div>
+
+          <!-- Story side -->
+          <div class="flex-1 reveal" style="transition-delay:0.15s">
+            <blockquote class="founder-quote mb-8">
+              &ldquo;I did not wait for the world to notice the crying child at my door.<br />
+              I picked him up with empty hands and a full heart,<br />
+              and I built this place — one brick of faith at a time.&rdquo;
+            </blockquote>
+            <p class="text-slate-300 leading-relaxed mb-5">
+              In 2023, in the quiet hills of Migori County, a young man named <strong class="text-white">Ong'era Daniel</strong> made a decision that would change dozens of lives. He had no donor cheques, no grants, no board of directors behind him — only the raw fire of compassion and a conviction that <em class="text-orange-400">one person, fully committed, can be the beginning of everything.</em>
+            </p>
+            <p class="text-slate-300 leading-relaxed mb-5">
+              He began by opening his own home. Then the neighbourhood began to notice. Then a community rallied. Slowly, like dawn breaking over the Migori plains, what started as a single act of love became <strong class="text-white">Ong'era Brethren International Foundation</strong> — a campus of hope housing orphaned children, educating day scholars, and feeding hundreds of hungry mouths every single month.
+            </p>
+            <p class="text-slate-300 leading-relaxed">
+              Daniel's story is a testament that the seeds of greatness are not sown by wealth, but by <em class="text-orange-400">audacious, stubborn, beautiful love.</em> Today, the foundation carries his name and his spirit — proof that one person who refuses to look away can light a thousand futures.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline milestones -->
+        <div class="reveal">
+          <p class="text-slate-400 text-xs font-bold uppercase tracking-widest text-center mb-8">The Journey So Far</p>
+          <div class="relative">
+            <!-- Vertical line (desktop) -->
+            <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-white/10" aria-hidden="true"></div>
+
+            <div class="space-y-8 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-16 md:gap-y-10">
+
+              <!-- Milestone 1 -->
+              <div class="flex items-start gap-4 md:justify-end md:text-right">
+                <div class="md:order-2 founder-timeline-dot flex-shrink-0">
+                  <i class="fa-solid fa-seedling text-white text-sm" aria-hidden="true"></i>
+                </div>
+                <div class="md:order-1">
+                  <p class="text-orange-400 text-xs font-bold uppercase tracking-wider mb-1">2023 — The Spark</p>
+                  <p class="text-white font-semibold">Founded Solo, From Nothing</p>
+                  <p class="text-slate-400 text-sm mt-1">With no funding, only passion and faith, Daniel opened the doors of what would become a home for Kenya's most vulnerable children.</p>
+                </div>
+              </div>
+
+              <!-- Milestone 2 -->
+              <div class="flex items-start gap-4">
+                <div class="founder-timeline-dot flex-shrink-0">
+                  <i class="fa-solid fa-house-chimney text-white text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-orange-400 text-xs font-bold uppercase tracking-wider mb-1">2023 — First Roof</p>
+                  <p class="text-white font-semibold">60+ Orphans Welcomed</p>
+                  <p class="text-slate-400 text-sm mt-1">The first resident orphans arrived — children with nowhere to go found a home, warm meals, and a man who refused to turn them away.</p>
+                </div>
+              </div>
+
+              <!-- Milestone 3 -->
+              <div class="flex items-start gap-4 md:justify-end md:text-right">
+                <div class="md:order-2 founder-timeline-dot flex-shrink-0">
+                  <i class="fa-solid fa-book-open text-white text-sm" aria-hidden="true"></i>
+                </div>
+                <div class="md:order-1">
+                  <p class="text-orange-400 text-xs font-bold uppercase tracking-wider mb-1">2024 — Education Wing</p>
+                  <p class="text-white font-semibold">240+ Day Scholars Enrolled</p>
+                  <p class="text-slate-400 text-sm mt-1">The community responded. Day scholars from Migori began arriving, and an education program took root — a school born from a dream.</p>
+                </div>
+              </div>
+
+              <!-- Milestone 4 -->
+              <div class="flex items-start gap-4">
+                <div class="founder-timeline-dot flex-shrink-0">
+                  <i class="fa-solid fa-globe text-white text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-orange-400 text-xs font-bold uppercase tracking-wider mb-1">2025 — Global Reach</p>
+                  <p class="text-white font-semibold">International Foundation Status</p>
+                  <p class="text-slate-400 text-sm mt-1">The world began to listen. Donors from across the globe joined Daniel's mission — turning one man's passion into an international family of change-makers.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to action -->
+        <div class="mt-16 text-center reveal">
+          <p class="text-slate-300 max-w-xl mx-auto mb-6 font-display text-lg italic">
+            &ldquo;Daniel started it alone. Now it takes a village — and the village is you.&rdquo;
+          </p>
+          <a href="#donate"
+            class="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full transition-all duration-200 hover:scale-105 shadow-xl hover:shadow-orange-500/40">
+            <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+            Join Daniel's Mission
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+         IMPACT STATS
+    ====================================================== -->
+    <section id="impact" class="bg-white py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <span class="section-eyebrow">Our Impact</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-900 mt-1">Numbers That Tell Our Story</h2>
+          <p class="text-slate-500 mt-3 max-w-xl mx-auto">
+            Every figure represents a real child, a real meal, a real future transformed by compassion.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+          <article class="stat-card reveal bg-gradient-to-br from-navy-900 to-navy-700 rounded-2xl p-7 text-center text-white shadow-lg">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
+              <i class="fa-solid fa-house-chimney-heart text-orange-400 text-2xl" aria-hidden="true"></i>
+            </div>
+            <p class="text-4xl font-bold text-orange-400 counter" data-target="60" aria-label="More than 60 resident orphans">60+</p>
+            <p class="text-base font-semibold mt-1">Resident Orphans</p>
+            <p class="text-slate-300 text-xs mt-1.5">Housed, loved &amp; educated on campus</p>
+          </article>
+
+          <article class="stat-card reveal bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-7 text-center text-white shadow-lg" style="transition-delay:0.1s">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-white/15 flex items-center justify-center">
+              <i class="fa-solid fa-school text-white text-2xl" aria-hidden="true"></i>
+            </div>
+            <p class="text-4xl font-bold text-white counter" data-target="240" aria-label="More than 240 day scholars">240+</p>
+            <p class="text-base font-semibold mt-1">Day Scholars</p>
+            <p class="text-white/80 text-xs mt-1.5">Community children enrolled daily</p>
+          </article>
+
+          <article class="stat-card reveal bg-gradient-to-br from-earth-600 to-earth-500 rounded-2xl p-7 text-center text-white shadow-lg" style="transition-delay:0.2s">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-white/15 flex items-center justify-center">
+              <i class="fa-solid fa-diagram-project text-white text-2xl" aria-hidden="true"></i>
+            </div>
+            <p class="text-4xl font-bold text-white counter" data-target="20" aria-label="More than 20 active projects">20+</p>
+            <p class="text-base font-semibold mt-1">Active Projects</p>
+            <p class="text-white/80 text-xs mt-1.5">Ongoing development initiatives</p>
+          </article>
+
+          <article class="stat-card reveal bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl p-7 text-center text-white shadow-lg" style="transition-delay:0.3s">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
+              <i class="fa-solid fa-bowl-food text-orange-400 text-2xl" aria-hidden="true"></i>
+            </div>
+            <p class="text-4xl font-bold text-orange-400 counter" data-target="1000" aria-label="More than 1000 meals per month">1,000+</p>
+            <p class="text-base font-semibold mt-1">Meals Monthly</p>
+            <p class="text-slate-300 text-xs mt-1.5">Nutritious meals served every month</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ACTIVE PROJECTS
+    ====================================================== -->
+    <section id="projects" class="bg-slate-50 py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <span class="section-eyebrow">Active Projects</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-900 mt-1">Fund a Project, Change a Life</h2>
+          <p class="text-slate-500 mt-3 max-w-xl mx-auto">Every dollar goes directly toward building, educating, and feeding the children in our care.</p>
+        </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          
+          <!-- Church Renovation -->
+          <article class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
+            <div class="overflow-hidden">
+              <img class="project-img" src="images/church-men.jpg" alt="Foundation leaders and members standing outside the stone church building" loading="lazy" width="600" height="210" style="object-fit:cover;" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-navy-900 text-orange-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Church</span>
+                <span class="text-xs text-slate-400 font-medium">Needs Support</span>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 mb-2 leading-snug">Church Renovation</h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4 flex-1">Our original stone church is the spiritual heartbeat of the foundation. It needs renovation &mdash; new doors, windows, and plastering &mdash; to continue serving hundreds of worshippers and our resident children.</p>
+              <a href="https://wa.me/254703424109?text=Hello%2C%20I%20want%20to%20support%20the%20Church%20Renovation%20project." target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-[0.8rem] uppercase tracking-wider py-3 px-6 rounded-xl transition-all duration-200">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Message to Fund
+              </a>
+            </div>
+          </article>
+
+          <!-- Agriculture Project -->
+          <article class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 flex flex-col" style="transition-delay:0.1s">
+            <div class="overflow-hidden">
+              <img class="project-img" src="images/poultry.jpg" alt="Poultry farming for the agriculture project" loading="lazy" width="600" height="210" style="object-fit:cover;" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-earth-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Agriculture</span>
+                <span class="text-xs text-slate-400 font-medium">Community</span>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 mb-2 leading-snug">Community Farming</h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4 flex-1">Empowering local caregivers with agricultural resources and poultry farming to grow their own food and generate income, promoting sustainability and nutritional self-reliance for families.</p>
+              <a href="https://wa.me/254703424109?text=Hello%2C%20I%20want%20to%20support%20the%20Agriculture%20Project." target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-[0.8rem] uppercase tracking-wider py-3 px-6 rounded-xl transition-all duration-200">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Message to Fund
+              </a>
+            </div>
+          </article>
+
+          <!-- Land Purchase Project -->
+          <article class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 flex flex-col" style="transition-delay:0.15s">
+            <div class="overflow-hidden">
+              <img class="project-img" src="images/land.jpg" alt="Members of the foundation standing on land to be purchased" loading="lazy" width="600" height="210" style="object-fit:cover;" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Settlement</span>
+                <span class="text-xs text-slate-400 font-medium">Vision</span>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 mb-2 leading-snug">Permanent Settlement</h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4 flex-1">We are actively raising funds to purchase land for a permanent settlement. This visionary project will provide a secure, long-term home and foundational stability for our community.</p>
+              <a href="https://wa.me/254703424109?text=Hello%2C%20I%20want%20to%20support%20the%20Permanent%20Settlement%20Land%20Project." target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-[0.8rem] uppercase tracking-wider py-3 px-6 rounded-xl transition-all duration-200">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Message to Fund
+              </a>
+            </div>
+          </article>
+
+          <!-- Christmas & New Year Outreach -->
+          <article class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 flex flex-col" style="transition-delay:0.2s">
+            <div class="overflow-hidden">
+              <img class="project-img" src="images/christmas-distribution.jpg" alt="Distribution of supplies to the less fortunate during outreach" loading="lazy" width="600" height="210" style="object-fit:cover;" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Outreach</span>
+                <span class="text-xs text-slate-400 font-medium">Seasonal</span>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 mb-2 leading-snug">Festive Season Outreach</h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4 flex-1">Every year-end, we run a special project to distribute food, clothing, and gifts to the most needy and less fortunate in the community during Christmas and New Year.</p>
+              <a href="https://wa.me/254703424109?text=Hello%2C%20I%20want%20to%20support%20the%20Christmas%20and%20New%20Year%20Outreach." target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-[0.8rem] uppercase tracking-wider py-3 px-6 rounded-xl transition-all duration-200">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Message to Fund
+              </a>
+            </div>
+          </article>
+
+          <!-- Education Fund -->
+          <article class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
+            <div class="overflow-hidden">
+              <img class="project-img" src="images/youth-community.jpg" alt="Youth community members gathering outdoors" loading="lazy" width="600" height="210" style="object-fit:cover;" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Education</span>
+                <span class="text-xs text-slate-400 font-medium">Ongoing</span>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 mb-2 leading-snug">Education Fund</h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4 flex-1">Covering school fees, textbooks, uniforms, and learning materials for 300+ scholars from pre-school through secondary level in Migori County.</p>
+              <a href="https://wa.me/254703424109?text=Hello%2C%20I%20want%20to%20support%20the%20Education%20Fund." target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-[0.8rem] uppercase tracking-wider py-3 px-6 rounded-xl transition-all duration-200">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Message to Fund
+              </a>
+            </div>
+          </article>
+
+          <!-- Feeding Program -->
+          <article class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 flex flex-col" style="transition-delay:0.1s">
+            <div class="overflow-hidden">
+              <img class="project-img" src="images/feeding-program.jpg" alt="Women of the foundation preparing small fish (omena) for the feeding program" loading="lazy" width="600" height="210" style="object-fit:cover;" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Nutrition</span>
+                <span class="text-xs font-bold" style="color:#527a32;">Critical Need</span>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 mb-2 leading-snug">Feeding Program</h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-4 flex-1">Providing over 1,000 nutritious meals every month to resident orphans and visiting scholars. A hungry child cannot learn &mdash; your gift feeds a future.</p>
+              <a href="https://wa.me/254703424109?text=Hello%2C%20I%20want%20to%20support%20the%20Feeding%20Program." target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-[0.8rem] uppercase tracking-wider py-3 px-6 rounded-xl transition-all duration-200">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Message to Fund
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         GALLERY
+    ====================================================== -->
+    <section id="gallery" class="bg-white py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <span class="section-eyebrow">Visual Journey</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-900 mt-1">Our Impact in Pictures</h2>
+          <p class="text-slate-500 mt-3 max-w-xl mx-auto">A glimpse into the daily lives, joy, and resilience of the community we serve.</p>
+        </div>
+
+        <div class="masonry-grid reveal" style="transition-delay:0.1s">
+          <div class="masonry-item" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+            <img src="images/youth-community.jpg" alt="Youth community members gathering outdoors" loading="lazy" />
+            <div class="masonry-overlay"><i class="fa-solid fa-magnifying-glass-plus text-white text-3xl opacity-80"></i></div>
+          </div>
+          <div class="masonry-item" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+            <img src="images/church-men.jpg" alt="Foundation leaders and members standing outside the stone church building" loading="lazy" />
+            <div class="masonry-overlay"><i class="fa-solid fa-magnifying-glass-plus text-white text-3xl opacity-80"></i></div>
+          </div>
+          <div class="masonry-item" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+            <img src="images/agriculture-women.jpg" alt="Women of the community sorting agricultural produce outside" loading="lazy" />
+            <div class="masonry-overlay"><i class="fa-solid fa-magnifying-glass-plus text-white text-3xl opacity-80"></i></div>
+          </div>
+          <div class="masonry-item" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+            <img src="images/christmas-distribution.jpg" alt="Distribution of supplies to the less fortunate during outreach" loading="lazy" />
+            <div class="masonry-overlay"><i class="fa-solid fa-magnifying-glass-plus text-white text-3xl opacity-80"></i></div>
+          </div>
+          <div class="masonry-item" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+            <img src="images/visitor-inside.jpg" alt="An international visitor with an elder of the foundation" loading="lazy" />
+            <div class="masonry-overlay"><i class="fa-solid fa-magnifying-glass-plus text-white text-3xl opacity-80"></i></div>
+          </div>
+          <div class="masonry-item" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+            <img src="images/children-with-visitor.jpg" alt="Children and visitors" loading="lazy" />
+            <div class="masonry-overlay"><i class="fa-solid fa-magnifying-glass-plus text-white text-3xl opacity-80"></i></div>
+          </div>
+          <div class="masonry-item" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+            <img src="images/poultry.jpg" alt="Poultry farming for the agriculture project" loading="lazy" />
+            <div class="masonry-overlay"><i class="fa-solid fa-magnifying-glass-plus text-white text-3xl opacity-80"></i></div>
+          </div>
+          <div class="masonry-item" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+            <img src="images/land.jpg" alt="Members of the foundation standing on land to be purchased" loading="lazy" />
+            <div class="masonry-overlay"><i class="fa-solid fa-magnifying-glass-plus text-white text-3xl opacity-80"></i></div>
+          </div>
+          <div class="masonry-item" onclick="openLightbox(this.querySelector('img').src, this.querySelector('img').alt)">
+            <img src="images/feeding-program.jpg" alt="Women of the foundation preparing small fish (omena) for the feeding program" loading="lazy" />
+            <div class="masonry-overlay"><i class="fa-solid fa-magnifying-glass-plus text-white text-3xl opacity-80"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- LIGHTBOX -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery fullscreen view" tabindex="-1">
+      <button id="lightbox-close" class="absolute top-6 right-6 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors" aria-label="Close fullscreen view">
+        <i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- =====================================================
+         NEWSLETTER / NEWS SECTOR
+    ====================================================== -->
+    <section id="newsletter" class="bg-gradient-to-br from-orange-500 to-orange-600 py-16 px-4 relative overflow-hidden">
+      <!-- Decorative background rings -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full border-4 border-white/20" aria-hidden="true"></div>
+      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full border-4 border-white/10" aria-hidden="true"></div>
+      
+      <div class="max-w-4xl mx-auto text-center reveal relative z-10">
+        <span class="inline-block bg-white/20 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 border border-white/30 backdrop-blur-sm shadow-sm uppercase tracking-wider">Stay Updated</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-4 drop-shadow-md">Join Our News & Updates</h2>
+        <p class="text-white/95 text-sm sm:text-base max-w-xl mx-auto mb-8 font-medium leading-relaxed">
+          Subscribe to receive monthly stories of hope, project updates, and ways you can help. Direct inquiries can be sent to 
+          <a href="mailto:ongeradaniel585@gmail.com" class="font-bold underline hover:text-navy-900 transition-colors bg-white/20 px-2 py-0.5 rounded ml-1">ongeradaniel585@gmail.com</a>
+        </p>
+        
+        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto bg-white/10 p-2 rounded-2xl backdrop-blur-sm border border-white/20" onsubmit="event.preventDefault(); document.getElementById('newsletter-toast').classList.remove('hidden'); setTimeout(()=>document.getElementById('newsletter-toast').classList.add('hidden'), 3500); this.reset();">
+          <input type="email" placeholder="Enter your email address" required class="flex-1 px-5 py-3.5 rounded-xl text-navy-900 outline-none focus:ring-4 focus:ring-navy-900/20 font-medium placeholder-slate-400 shadow-inner" />
+          <button type="submit" class="bg-navy-900 hover:bg-navy-800 text-white font-bold uppercase tracking-wider text-[0.8rem] px-8 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 border border-navy-700">Subscribe</button>
+        </form>
+        <p id="newsletter-toast" class="hidden mt-4 text-white font-bold text-sm bg-green-500 inline-block px-4 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-check mr-1"></i> Thank you for subscribing to our news!</p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         DONATION PORTAL (Two-Step)
+    ====================================================== -->
+    <section id="donate" class="bg-white py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <span class="section-eyebrow">Give Today</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-navy-900 mt-1">The Donation Portal</h2>
+          <p class="text-slate-500 mt-3 max-w-xl mx-auto">100% of your donation goes directly to the children. We accept international wire transfers.</p>
+        </div>
+
+        <div class="max-w-2xl mx-auto">
+
+          <!-- STEP 1 -->
+          <div id="donation-step-1" class="reveal bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+            <div class="bg-navy-900 px-8 py-6 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-orange-500 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-heart text-white text-base" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="text-white font-bold text-lg">Make a Donation</h3>
+                <p class="text-slate-300 text-xs">Step 1 of 2 &mdash; Donor Information</p>
+              </div>
+              <div class="ml-auto flex gap-2" aria-hidden="true">
+                <span class="w-3 h-3 rounded-full bg-orange-500"></span>
+                <span class="w-3 h-3 rounded-full bg-white/20"></span>
+              </div>
+            </div>
+
+            <div class="px-8 pt-8">
+              <p class="text-sm font-semibold text-slate-600 mb-3">Quick Select Amount (USD):</p>
+              <div class="grid grid-cols-4 gap-2 mb-6" id="quick-amounts" role="group" aria-label="Preset donation amounts">
+                <button type="button" class="amount-btn" data-amount="25" aria-label="Select 25 USD">$25</button>
+                <button type="button" class="amount-btn" data-amount="50" aria-label="Select 50 USD">$50</button>
+                <button type="button" class="amount-btn" data-amount="100" aria-label="Select 100 USD">$100</button>
+                <button type="button" class="amount-btn" data-amount="500" aria-label="Select 500 USD">$500</button>
+              </div>
+            </div>
+
+            <form id="donor-form" class="px-8 pb-8 space-y-4" novalidate>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="donor-first" class="block text-sm font-semibold text-slate-700 mb-1.5">First Name <span class="text-red-500" aria-hidden="true">*</span></label>
+                  <input type="text" id="donor-first" name="firstName" class="form-input" placeholder="e.g. John" autocomplete="given-name" required />
+                </div>
+                <div>
+                  <label for="donor-last" class="block text-sm font-semibold text-slate-700 mb-1.5">Last Name <span class="text-red-500" aria-hidden="true">*</span></label>
+                  <input type="text" id="donor-last" name="lastName" class="form-input" placeholder="e.g. Doe" autocomplete="family-name" required />
+                </div>
+              </div>
+              <div>
+                <label for="donor-email" class="block text-sm font-semibold text-slate-700 mb-1.5">Email Address <span class="text-red-500" aria-hidden="true">*</span></label>
+                <input type="email" id="donor-email" name="email" class="form-input" placeholder="john.doe@email.com" autocomplete="email" required />
+              </div>
+              <div>
+                <label for="donor-amount" class="block text-sm font-semibold text-slate-700 mb-1.5">Expected Donation Amount (USD) <span class="text-red-500" aria-hidden="true">*</span></label>
+                <div class="relative">
+                  <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 font-bold text-sm select-none" aria-hidden="true">$</span>
+                  <input type="number" id="donor-amount" name="amount" class="form-input pl-8" placeholder="0.00" min="1" step="0.01" required />
+                </div>
+              </div>
+              <div class="flex items-center gap-3 bg-slate-50 rounded-xl p-4 border border-slate-200">
+                <input type="checkbox" id="donor-anon" name="anonymous" class="custom-check" />
+                <label for="donor-anon" class="text-sm text-slate-600 cursor-pointer">
+                  <strong class="text-slate-800">Make this donation anonymous</strong><br />
+                  <span class="text-xs text-slate-400">Your name will not appear in our public donor list.</span>
+                </label>
+              </div>
+              <p id="form-error" class="text-red-500 text-sm font-medium hidden" role="alert" aria-live="assertive"></p>
+              <button type="submit"
+                class="w-full bg-navy-900 hover:bg-navy-700 text-white font-bold py-4 rounded-2xl text-base transition-all duration-200 hover:shadow-xl flex items-center justify-center gap-3 mt-2">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                Proceed to Transfer Details
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
+              <p class="text-center text-xs text-slate-400 mt-2">🔒 Your information is safe and never shared with third parties.</p>
+            </form>
+          </div>
+
+          <!-- STEP 2 -->
+          <div id="donation-step-2" class="hidden">
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+              <div class="bg-navy-900 px-8 py-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-earth-500 flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-lock text-white text-base" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h3 class="text-white font-bold text-lg">🔒 Secure Wire Transfer Details</h3>
+                  <p class="text-slate-300 text-xs">Step 2 of 2 &mdash; Initiate Your Bank Transfer</p>
+                </div>
+                <div class="ml-auto flex gap-2" aria-hidden="true">
+                  <span class="w-3 h-3 rounded-full bg-white/20"></span>
+                  <span class="w-3 h-3 rounded-full bg-orange-500"></span>
+                </div>
+              </div>
+              <div class="px-8 py-8 space-y-5">
+                <div id="donor-summary" class="bg-orange-50 border border-orange-200 rounded-xl p-4 text-sm">
+                  <p class="font-semibold text-navy-900">✅ Donor details recorded</p>
+                  <p class="text-slate-600 mt-1">Use your email as the wire transfer reference/memo.</p>
+                </div>
+
+                <div class="space-y-3">
+                  <div>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1.5">Account Name</p>
+                    <div class="wire-field">
+                      <span id="w1">Ong'era Brethren International Foundation</span>
+                      <button class="copy-btn" onclick="copyField(this,document.getElementById('w1').textContent)" aria-label="Copy account name">
+                        <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1.5">Bank Name</p>
+                    <div class="wire-field">
+                      <span id="w2">Diamond Trust Bank (DTB)</span>
+                      <button class="copy-btn" onclick="copyField(this,document.getElementById('w2').textContent)" aria-label="Copy bank name">
+                        <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1.5">Account Number</p>
+                    <div class="wire-field">
+                      <span id="w3">5499980001</span>
+                      <button class="copy-btn" onclick="copyField(this,document.getElementById('w3').textContent)" aria-label="Copy account number">
+                        <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1.5">SWIFT / BIC Code</p>
+                    <div class="wire-field">
+                      <span id="w4">DTKEKENAXXX</span>
+                      <button class="copy-btn" onclick="copyField(this,document.getElementById('w4').textContent)" aria-label="Copy SWIFT code">
+                        <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1.5">Bank / Branch Code</p>
+                    <div class="wire-field">
+                      <span id="w5">DTB-KE-001</span>
+                      <button class="copy-btn" onclick="copyField(this,document.getElementById('w5').textContent)" aria-label="Copy branch code">
+                        <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-slate-50 border-l-4 border-orange-500 rounded-r-xl p-4">
+                  <p class="text-sm font-semibold text-navy-900 mb-1">⚠️ Important Transfer Notes</p>
+                  <ul class="text-xs text-slate-500 space-y-1 list-disc list-inside">
+                    <li>Use your registered email as the wire transfer reference/memo.</li>
+                    <li>Transfer in USD. International fees may apply.</li>
+                    <li>Email proof of transfer to <strong class="text-navy-900">donate@ongerabrethren.org</strong></li>
+                    <li>Acknowledgment will be sent within 3–5 business days.</li>
+                  </ul>
+                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                  <button onclick="window.print()"
+                    class="flex-1 inline-flex items-center justify-center gap-2 border-2 border-navy-900 text-navy-900 font-bold py-3 rounded-xl text-sm hover:bg-navy-900 hover:text-white transition-all">
+                    <i class="fa-solid fa-print" aria-hidden="true"></i> Print / Save Details
+                  </button>
+                  <button onclick="backToStep1()"
+                    class="flex-1 inline-flex items-center justify-center gap-2 border-2 border-slate-300 text-slate-600 font-bold py-3 rounded-xl text-sm hover:bg-slate-50 transition-all">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Edit Donor Info
+                  </button>
+                  <a href="#hero" onclick="backToStep1()"
+                    class="flex-1 inline-flex items-center justify-center gap-2 bg-slate-100 text-slate-700 font-bold py-3 rounded-xl text-sm hover:bg-slate-200 transition-all">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i> Back to Main Menu
+                  </a>
+                </div>
+                <p class="text-center text-xs font-semibold mt-2" style="color:#527a32;">🙏 Thank you for your generosity. Every dollar changes a life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer id="contact" class="bg-navy-900 text-slate-300">
+    <div class="overflow-hidden leading-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-10" fill="#f8f9fb">
+        <path d="M0,30 C480,60 960,0 1440,30 L1440,0 L0,0 Z" />
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-2.5 mb-5">
+            <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-dove text-white text-lg" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="text-white font-display font-bold text-sm leading-tight">Ong'era Brethren</p>
+              <p class="text-orange-400 text-xs leading-tight">International Foundation</p>
+            </div>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">Empowering Children and Building Communities in Migori County, Kenya since 2023.</p>
+          <p class="text-xs text-slate-500">
+            <i class="fa-solid fa-file-shield text-orange-400 mr-1" aria-hidden="true"></i>
+            NGO Reg.: <span class="text-slate-300 font-semibold">[REG. NO. PENDING]</span>
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5">Quick Links</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#about" class="text-slate-400 hover:text-orange-400 text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-orange-500" aria-hidden="true"></i>About Us</a></li>
+            <li><a href="#impact" class="text-slate-400 hover:text-orange-400 text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-orange-500" aria-hidden="true"></i>Our Impact</a></li>
+            <li><a href="#projects" class="text-slate-400 hover:text-orange-400 text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-orange-500" aria-hidden="true"></i>Active Projects</a></li>
+            <li><a href="#donate" class="text-slate-400 hover:text-orange-400 text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-orange-500" aria-hidden="true"></i>Donate Now</a></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5">Contact Us</h4>
+          <ul class="space-y-3.5">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-orange-400 mt-0.5 w-4 flex-shrink-0" aria-hidden="true"></i>
+              <address class="not-italic text-slate-400 text-sm">Migori County, Nyanza Region,<br />Kenya, East Africa</address>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-orange-400 w-4 flex-shrink-0" aria-hidden="true"></i>
+              <a href="mailto:info@ongerabrethren.org" class="text-slate-400 hover:text-orange-400 text-sm transition-colors">info@ongerabrethren.org</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-orange-400 w-4 flex-shrink-0" aria-hidden="true"></i>
+              <a href="mailto:donate@ongerabrethren.org" class="text-slate-400 hover:text-orange-400 text-sm transition-colors">donate@ongerabrethren.org</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-brands fa-whatsapp text-green-400 w-4 flex-shrink-0" aria-hidden="true"></i>
+              <a href="https://wa.me/254703424109" class="text-slate-400 hover:text-orange-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">+254 703 424 109</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-5">Stay Connected</h4>
+          <div class="flex gap-3 mb-7">
+            <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-orange-500 flex items-center justify-center transition-all" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f text-white text-sm" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-orange-500 flex items-center justify-center transition-all" aria-label="X (Twitter)">
+              <i class="fa-brands fa-x-twitter text-white text-sm" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-orange-500 flex items-center justify-center transition-all" aria-label="Instagram">
+              <i class="fa-brands fa-instagram text-white text-sm" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/254703424109" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 rounded-xl bg-white/10 hover:bg-green-500 flex items-center justify-center transition-all" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp text-white text-sm" aria-hidden="true"></i>
+            </a>
+          </div>
+          <a href="#donate" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-[0.8rem] uppercase tracking-wider px-6 py-3 rounded-xl transition-all hover:shadow-lg">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-slate-500 text-xs text-center sm:text-left">
+          &copy; 2023&ndash;<span id="footer-year"></span> Ong'era Brethren International Foundation.
+          All rights reserved. Registered NGO, Kenya.
+        </p>
+        <p class="text-slate-600 text-xs">Built with ❤️ to serve the children of Kenya.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+  <a id="whatsapp-fab"
+    href="https://wa.me/254703424109?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20Ong%27era%20Brethren%20International%20Foundation."
+    target="_blank" rel="noopener noreferrer"
+    aria-label="Chat with Ong'era Brethren International Foundation on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-white text-2xl" aria-hidden="true"></i>
+  </a>
+
+  <!-- Toast -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+  <script>
+    'use strict';
+
+    /* 1. STICKY HEADER */
+    const siteHeader = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* 2. HAMBURGER */
+    const hamburger  = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
+      hamburger.innerHTML = open
+        ? '<i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>'
+        : '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.innerHTML = '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+    }));
+
+    /* 3. SCROLL REVEAL */
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+    /* 4. PROGRESS BARS */
+    const progObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { setTimeout(() => { e.target.style.width = e.target.dataset.progress + '%'; }, 350); progObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.progress-fill').forEach(el => progObs.observe(el));
+
+    /* 5. FOOTER YEAR */
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    /* 6. QUICK AMOUNTS */
+    const amountInp = document.getElementById('donor-amount');
+    document.querySelectorAll('.amount-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        amountInp.value = btn.dataset.amount;
+      });
+    });
+
+    /* 7. DONATION FORM */
+    const donorForm   = document.getElementById('donor-form');
+    const step1El     = document.getElementById('donation-step-1');
+    const step2El     = document.getElementById('donation-step-2');
+    const formErrEl   = document.getElementById('form-error');
+    const summaryEl   = document.getElementById('donor-summary');
+
+    donorForm.addEventListener('submit', e => {
+      e.preventDefault();
+      formErrEl.classList.add('hidden');
+      const fn  = document.getElementById('donor-first').value.trim();
+      const ln  = document.getElementById('donor-last').value.trim();
+      const em  = document.getElementById('donor-email').value.trim();
+      const amt = parseFloat(document.getElementById('donor-amount').value);
+      const anon= document.getElementById('donor-anon').checked;
+
+      if (!fn || !ln) return showFormErr('Please enter your first and last name.');
+      if (!em || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) return showFormErr('Please enter a valid email address.');
+      if (!amt || isNaN(amt) || amt <= 0) return showFormErr('Please enter a valid donation amount greater than $0.');
+
+      const name = anon ? 'Anonymous Donor' : esc(fn + ' ' + ln);
+      summaryEl.innerHTML = `
+        <p class="font-semibold mb-2" style="color:#0f2044;">✅ Donor details recorded successfully</p>
+        <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
+          <span style="color:#64748b">Donor Name:</span><span style="font-weight:700;color:#0f2044">${name}</span>
+          <span style="color:#64748b">Email:</span><span style="font-weight:700;color:#0f2044">${esc(em)}</span>
+          <span style="color:#64748b">Expected Amount:</span><span style="font-weight:700;color:#ea6c10;font-size:1rem">$${amt.toFixed(2)} USD</span>
+        </div>
+        <p style="font-size:0.75rem;color:#64748b;border-top:1px solid #fed7aa;padding-top:0.5rem;margin-top:0.75rem">
+          Use <strong style="color:#0f2044">${esc(em)}</strong> as your wire transfer reference/memo.
+        </p>`;
+
+      step1El.style.transition = 'opacity .3s,transform .3s';
+      step1El.style.opacity = '0'; step1El.style.transform = 'translateX(-16px)';
+      setTimeout(() => {
+        step1El.classList.add('hidden'); step1El.style.cssText = '';
+        step2El.classList.remove('hidden');
+        step2El.style.cssText = 'opacity:0;transform:translateX(16px);transition:opacity .35s,transform .35s';
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          step2El.style.opacity = '1'; step2El.style.transform = 'translateX(0)';
+        }));
+        step2El.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    });
+
+    function showFormErr(msg) {
+      formErrEl.textContent = msg; formErrEl.classList.remove('hidden');
+      formErrEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    function backToStep1() {
+      step2El.classList.add('hidden'); step1El.classList.remove('hidden');
+      step1El.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+    /* 8. COPY TO CLIPBOARD */
+    function copyField(btn, text) {
+      const done = () => {
+        btn.classList.add('copied');
+        btn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i> Copied!';
+        showToast('✅ Copied to clipboard!');
+        setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = '<i class="fa-regular fa-copy" aria-hidden="true"></i> Copy'; }, 2500);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done).catch(() => fallback(text, done));
+      } else { fallback(text, done); }
+    }
+    function fallback(text, cb) {
+      const ta = Object.assign(document.createElement('textarea'),{value:text,style:'position:fixed;opacity:0;top:0;left:0'});
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); cb(); } catch(e) {}
+      document.body.removeChild(ta);
+    }
+
+    /* 9. TOAST */
+    let toastTimer; const toastEl = document.getElementById('toast');
+    function showToast(msg) {
+      toastEl.textContent = msg; toastEl.classList.add('show');
+      clearTimeout(toastTimer); toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2800);
+    }
+
+    /* 12. LIGHTBOX */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCap = document.getElementById('lightbox-caption');
+    window.openLightbox = function(src, alt) {
+      lightboxImg.src = src; lightboxImg.alt = alt; lightboxCap.textContent = alt;
+      lightbox.classList.add('active'); lightbox.focus();
+    };
+    document.getElementById('lightbox-close')?.addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox?.addEventListener('click', e => { if(e.target === lightbox) lightbox.classList.remove('active'); });
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') lightbox?.classList.remove('active'); });
+
+    /* 11. ANIMATED COUNTERS */
+    const ctrObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target, t = parseInt(el.dataset.target,10), big = t>=1000;
+        const end = big ? 1 : t; let cur = 0;
+        const inc = Math.max(1,Math.ceil(end/(1600/16)));
+        const tick = () => {
+          cur = Math.min(cur+inc, end);
+          el.textContent = big ? `${cur},000+` : `${cur}+`;
+          if (cur < end) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick); ctrObs.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('.counter').forEach(el => ctrObs.observe(el));
+  </script>
+</body>
+</html>
