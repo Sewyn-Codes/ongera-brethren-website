@@ -300,6 +300,15 @@
       .copy-btn { width: 100%; text-align: center; padding: 0.5rem; }
     }
   </style>
+  <style id="payment-freeze">
+    /* Payment freeze - hiding secondary sections and nav */
+    #about, #founder, #impact, #projects, #gallery, #newsletter, #donate, #contact, footer,
+    nav[aria-label="Primary navigation"],
+    #hamburger, #mobile-menu,
+    a[href^="#"]:not([href="#hero"]) {
+      display: none !important;
+    }
+  </style>
 </head>
 
 <body class="antialiased">
